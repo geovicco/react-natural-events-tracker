@@ -15,7 +15,8 @@
 <!-- > npm install react-mapbox-gl mapbox-gl --save -->
 
 #### Install Iconify library for displaying different icons on the map
-> npm install @iconify/react @iconify/react-mdi 
+<!-- > npm install @iconify/react @iconify/react-mdi -->
+> npm install --save-dev @iconify/react @iconify-icons/mdi 
 
 ### Start React Development Server
 > npm start
