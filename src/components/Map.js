@@ -5,10 +5,13 @@ import MapGL, { Marker,
     ScaleControl,
     NavigationControl } from 'react-map-gl';
 import LocationMarker from './LocationMarker';
+import InfoBox from './InfoBox';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiYWRpdmljY28iLCJhIjoiY2toN2d0cnJkMGFkMTJ5bzhxbTB5eDJmeCJ9.KfuAOmzRFSOf9dI1R4Mz2w'; // Set your mapbox token here
 
 const Map = ({ data }) => {
+
+    const [locationInfo, setLocationInfo] = useState(null)
     
     const [viewport, setViewport] = useState({
         latitude: 40,
@@ -24,7 +27,7 @@ const Map = ({ data }) => {
                            latitude={e.geometries[0].coordinates[1]} 
                            longitude = {e.geometries[0].coordinates[0]}
                    >
-                       <LocationMarker/>
+                       <LocationMarker onClick = {() => {setLocationInfo({ id:e.id, title: e.title, date:new Date(e.geometries[0].date), url:e.sources[0].url })}}/>
                    </Marker>
         }
         return null
@@ -35,7 +38,7 @@ const Map = ({ data }) => {
             <MapGL
             {...viewport}
             width= "100vw"
-            height= "100vh"
+            height= "96.15vh"
             mapStyle= "mapbox://styles/adivicco/ck92z7q8b2ndc1ioc8nc1vxf3"
             onViewportChange={nextViewport => setViewport(nextViewport)}
             mapboxApiAccessToken= {MAPBOX_TOKEN}
@@ -62,6 +65,9 @@ const Map = ({ data }) => {
                 {/* Add Data Markers to the Map */}
                 {wildfireMarkers}
             </MapGL>
+
+            {/* Location Information Box */}
+            {locationInfo && <InfoBox info={locationInfo}/>}
         </div>
     )
 }

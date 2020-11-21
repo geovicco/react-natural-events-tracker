@@ -5,11 +5,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header {
+  padding: 3px;
+  background-color: firebrick;
+  color: #fff;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-left: 1px;
+  margin-right: 1px;
+  z-index: 100;
+  /* border-radius: 5px; */
+}
+
+.header h1 {
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.map {
+  /* width: 100vw;
+  height: 50vh; */
+  position: relative;
+}
+ 
+.header header-icon {
+  size: 5rem;
 }
 
 .wildfire-icon {
@@ -55,4 +87,38 @@ code {
   bottom: 1.5rem;
   left: 89.5rem;
   margin: 5px; 
+}
+
+.event-info {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 200px;
+  min-height: 100px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.event-info h2 {
+  text-align: center;
+}
+
+.event-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-info li {
+  padding: 5px 0;
+}
+
+.event-info a:link {
+  color: aliceblue;
+}
+
+.event-info a:visited {
+  color: grey;
 }
