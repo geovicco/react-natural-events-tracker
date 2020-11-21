@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Map from './components/Map';
+import Loader from './components/Loader';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 // Fetch Data from NASA's EONET API
@@ -19,12 +20,14 @@ function App() {
       setLoading(false)
     }
     fetchEvents()
-    console.log(eventData);
-  }, [eventData])
+    // console.log(eventData);
+  }, [])
 
   return (
     <div>
-      <Map/>
+      {/* If map is done loading display a the map else display a message*/}
+      {/* { !loading ? <Map eventData={eventData} /> : <h1>Loading.....</h1>} */}
+      { !loading ? <Map data={eventData} /> : <Loader/>}
     </div>
   );
 }
