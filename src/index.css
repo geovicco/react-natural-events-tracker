@@ -32,3 +32,27 @@ code {
 .loader h1 {
   margin-top: -100px;
 }
+
+.nav-control {
+  margin: 5px;
+  width: 30px;
+  position: relative;
+}
+.geolocate-control {
+  margin: 5px;
+  width: 30px;
+  position: relative;
+}
+
+.fullscreen-control {
+  margin: 5px;
+  width: 30px;
+  position: relative;
+}
+
+.scale-control {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 89.5rem;
+  margin: 5px; 
+}

@@ -1,5 +1,9 @@
 import { useState } from 'react';
-import MapGL, { Marker } from 'react-map-gl';
+import MapGL, { Marker,
+    GeolocateControl,
+    FullscreenControl,
+    ScaleControl,
+    NavigationControl } from 'react-map-gl';
 import LocationMarker from './LocationMarker';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiYWRpdmljY28iLCJhIjoiY2toN2d0cnJkMGFkMTJ5bzhxbTB5eDJmeCJ9.KfuAOmzRFSOf9dI1R4Mz2w'; // Set your mapbox token here
@@ -36,6 +40,26 @@ const Map = ({ data }) => {
             onViewportChange={nextViewport => setViewport(nextViewport)}
             mapboxApiAccessToken= {MAPBOX_TOKEN}
             >
+
+                {/* Add Navigation Control Plugin */}
+                <NavigationControl className="nav-control" />
+
+                {/* Add a Geolocation Control Plugin */}
+                <GeolocateControl className="geolocate-control" 
+                                positionOptions={{enableHighAccuracy: true}} 
+                                trackUserLocation={true}
+                                label="Find My Location"
+                                />
+                {/* Add a Fullscreen Control Plugin */}
+                <FullscreenControl className="fullscreen-control" container={document.querySelector('body')}/>
+
+                {/* Add a Scale Control Plugin */}
+                <div className="scale-control" >
+                    <ScaleControl maxWidth={200} unit={"metric"}/>
+                </div>
+
+                
+                {/* Add Data Markers to the Map */}
                 {wildfireMarkers}
             </MapGL>
         </div>
