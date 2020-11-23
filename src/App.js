@@ -4,6 +4,7 @@ import Loader from './components/Loader';
 import Header from './components/Header';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
+
 // Fetch Data from NASA's EONET API
 
 function App() {

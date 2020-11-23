@@ -16,7 +16,13 @@
 
 #### Install Iconify library for displaying different icons on the map
 <!-- > npm install @iconify/react @iconify/react-mdi -->
-> npm install --save-dev @iconify/react @iconify-icons/mdi 
+> npm install --save-dev @iconify/react @iconify-icons/mdi
+<!-- Weather Icons -->
+> npm install --save-dev @iconify/react @iconify-icons/wi
+> npm i --save @fortawesome/fontawesome-svg-core
+> npm install --save @fortawesome/free-solid-svg-icons
+> npm install --save @fortawesome/react-fontawesome
+
 
 ### Start React Development Server
 > npm start

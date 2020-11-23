@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 code {
@@ -45,8 +45,23 @@ code {
 }
 
 .wildfire-icon {
-  font-size: 1.25rem;
+  font-size: 0.9rem;
   color: red;
+}
+
+.storm-icon {
+  font-size: 1.3rem;
+  color: blue;
+}
+
+.volcano-icon {
+  font-size: 1.15rem;
+  color: darkgoldenrod;
+}
+
+.iceberg-icon {
+  font-size: 1.25rem;
+  color: azure;
 }
 
 .loader {
@@ -65,6 +80,41 @@ code {
   margin-top: -100px;
 }
 
+.wildfires-button {
+  position: absolute;
+  top: 325px;
+  left: 2px;
+  border-radius: 8px;
+  background-color: black;
+  color: #fff;
+}
+
+.storms-button {
+  position: absolute;
+  top: 300px;
+  left: 2px;
+  border-radius: 8px;
+  background-color: black;
+  color: #fff;
+}
+
+.volcanoes-button {
+  position: absolute;
+  top: 375px;
+  left: 2px;
+  border-radius: 8px;
+  background-color: black;
+  color: #fff;
+}
+
+.icebergs-button {
+  position: absolute;
+  top: 350px;
+  left: 2px;
+  border-radius: 8px;
+  background-color: black;
+  color: #fff;
+}
 .nav-control {
   margin: 5px;
   width: 30px;
@@ -91,10 +141,10 @@ code {
 
 .event-info {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  bottom: 60px;
+  right: 10px;
   width: 200px;
-  min-height: 100px;
+  min-height: 80px;
   padding: 8px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 8px;
@@ -122,3 +172,4 @@ code {
 .event-info a:visited {
   color: grey;
 }
+

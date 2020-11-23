@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.12",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "deck.gl": "^8.3.8",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-map-gl": "^5.2.10",
+    "react-map-gl-geocoder": "^2.1.6",
     "react-scripts": "4.0.0",
     "web-vitals": "^0.2.4"
   },
@@ -38,6 +43,7 @@
   },
   "devDependencies": {
     "@iconify-icons/mdi": "^1.0.22",
+    "@iconify-icons/wi": "^1.0.0",
     "@iconify/react": "^1.1.3"
   }
 }
