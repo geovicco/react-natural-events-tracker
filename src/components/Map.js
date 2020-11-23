@@ -10,7 +10,7 @@ import Geocoder from "react-map-gl-geocoder";
 import { Icon } from '@iconify/react';
 import volcanoIcon from '@iconify-icons/wi/volcano';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faIcicles, faBolt, faFire } from '@fortawesome/free-solid-svg-icons'
+import { faIcicles, faBolt, faFire } from '@fortawesome/free-solid-svg-icons';
 
 
 const WildfireMarker = ({ onClick }) => {
@@ -81,55 +81,50 @@ const Map = ({ data }) => {
     // Pass data from EONET API to variables
     const wildfireMarkers = data.map(e => {
         if(e.categories[0].id === 8) {
-            return <Marker key = {e.id}
-                           latitude={e.geometries[0].coordinates[1]} 
-                           longitude = {e.geometries[0].coordinates[0]}
-                   >
-                       <WildfireMarker onClick = {() => {setLocationInfo({ id:e.id, title: e.title, date:new Date(e.geometries[0].date), url:e.sources[0].url })}}/>
-                   </Marker>
-        }
-        return null
-    })
+                return (
+                <Marker key = {e.id} latitude={e.geometries[0].coordinates[1]} longitude = {e.geometries[0].coordinates[0]}>
+                    <WildfireMarker onClick = {() => {setLocationInfo({ id:e.id, title: e.title, date:new Date(e.geometries[0].date), url:e.sources[0].url })}}/>
+                </Marker>
+                )}
+                return null
+            })
     
     const stormMarkers = data.map(e => {
         if(e.categories[0].id === 10) {
-            return <Marker key = {e.id}
-                           latitude={e.geometries[0].coordinates[1]} 
-                           longitude = {e.geometries[0].coordinates[0]}
-                   >
-                       <StormMarker onClick = {() => {setLocationInfo({ id:e.id, title: e.title, date:new Date(e.geometries[0].date), url:e.sources[0].url })}}/>
-                   </Marker>
-        }
-        return null
-    })
+            // if(e.categories[0].type === "Point") {
+                return (
+                <Marker key = {e.id} latitude={e.geometries[0].coordinates[1]} longitude = {e.geometries[0].coordinates[0]}>
+                    <StormMarker onClick = {() => {setLocationInfo({ id:e.id, title: e.title, date:new Date(e.geometries[0].date), url:e.sources[0].url })}}/>
+                </Marker>
+                )}
+                return null
+            })
 
     const volcanoMarkers = data.map(e => {
         if(e.categories[0].id === 12) {
-            // console.log(e.geometries[0].type)
             if (e.geometries[0].type === "Point") {
-                return <Marker key = {e.id}
-                latitude={e.geometries[0].coordinates[1]} 
-                longitude = {e.geometries[0].coordinates[0]}
-        >
-            <VolcanoMarker onClick = {() => {setLocationInfo({ id:e.id, title: e.title, date:new Date(e.geometries[0].date), url:e.sources[0].url })}}/>
-        </Marker>
-        }
-        return null
-    }
-    return null
-    }) 
+                return (
+                <Marker key = {e.id} latitude={e.geometries[0].coordinates[1]} longitude = {e.geometries[0].coordinates[0]}>
+                    <VolcanoMarker onClick = {() => {setLocationInfo({ id:e.id, title: e.title, date:new Date(e.geometries[0].date), url:e.sources[0].url })}}/>
+                </Marker>
+                )}
+                return null
+            }
+            return null
+        }) 
     
     const icebergMarkers = data.map(e => {
         if(e.categories[0].id === 15) {
-            return <Marker key = {e.id}
-                           latitude={e.geometries[0].coordinates[1]} 
-                           longitude = {e.geometries[0].coordinates[0]}
-                   >
-                       <IcebergMarker onClick = {() => {setLocationInfo({ id:e.id, title: e.title, date:new Date(e.geometries[0].date), url:e.sources[0].url })}}/>
-                   </Marker>
-        }
-        return null
-    })
+            // if (e.geometries[0].type === "Point") {
+                return (
+                <Marker key = {e.id} latitude={e.geometries[0].coordinates[1]} longitude = {e.geometries[0].coordinates[0]}>
+                    <IcebergMarker onClick = {() => {setLocationInfo({ id:e.id, title: e.title, date:new Date(e.geometries[0].date), url:e.sources[0].url })}}/>
+                </Marker>
+                )}
+                return null
+            })
+            // return null
+        // })
 
     return (
         <div className="map">
@@ -145,13 +140,13 @@ const Map = ({ data }) => {
             onViewportChange={nextViewport => setViewport(nextViewport)}
             mapboxApiAccessToken= {MAPBOX_TOKEN}
             >
+                
                 <Geocoder className="geocoder-control"
                 mapRef={mapRef}
                 onViewportChange={handleGeocoderViewportChange}
                 mapboxApiAccessToken={MAPBOX_TOKEN}
                 position="top-right"
             />
-
                 {/* Add Navigation Control Plugin */}
                 <NavigationControl className="nav-control" />
 

@@ -1,10 +1,7 @@
-import { Icon } from '@iconify/react';
-import wildfireIcon from '@iconify-icons/mdi/fire-alert';
-
 const Header = () => {
     return (
         <div className="header">
-            <h1>NASA's EONET API - Wildfire Tracker <Icon className="header-icon" icon={wildfireIcon} /></h1>            
+            <h1><a href="https://eonet.sci.gsfc.nasa.gov/docs/v2.1" add target="_blank" rel="noreferrer">NASA: Earth Observatory Natural Event Tracker</a></h1>            
         </div>
     )
 }

@@ -41,3 +41,6 @@
 > mkdir src\components
 ### Create a file called Map.js inside components folder
 > touch src/components/Map.js
+
+### Hosting React Application on Netlify
+Application URL: 
