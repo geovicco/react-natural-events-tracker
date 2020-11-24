@@ -1,5 +1,5 @@
 # Check out the Final Map on Netlify
-Application URL: https://5fbbff8e5e6e99162e1930a7--focused-cori-4b53cf.netlify.app/ 
+Application URL: https://focused-cori-4b53cf.netlify.app/ 
 
 # Getting Started with Create React App
 
