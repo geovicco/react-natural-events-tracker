@@ -43,4 +43,4 @@
 > touch src/components/Map.js
 
 ### Hosting React Application on Netlify
-Application URL: 
+Application URL: https://focused-cori-4b53cf.netlify.app/ 

@@ -3,7 +3,8 @@ import MapGL, { Marker,
     GeolocateControl,
     FullscreenControl,
     ScaleControl,
-    NavigationControl } from 'react-map-gl';
+    NavigationControl
+} from 'react-map-gl';
 import InfoBox from './InfoBox';
 import Button from './Button';
 import Geocoder from "react-map-gl-geocoder";
@@ -126,6 +127,7 @@ const Map = ({ data }) => {
             // return null
         // })
 
+
     return (
         <div className="map">
             <MapGL
@@ -139,6 +141,9 @@ const Map = ({ data }) => {
                     //"mapbox://styles/adivicco/ck92z7q8b2ndc1ioc8nc1vxf3"
             onViewportChange={nextViewport => setViewport(nextViewport)}
             mapboxApiAccessToken= {MAPBOX_TOKEN}
+            mapOptions = {{
+                customAttribution: '<a href="https://github.com/geovicco/react-natural-events-tracker">© Github</a>'
+            }} 
             >
                 
                 <Geocoder className="geocoder-control"
