@@ -47,7 +47,8 @@ const IcebergMarker = ({ onClick }) => {
     )
 }
 // Set API Key from your Mapbox Account 
-const MAPBOX_TOKEN = 'pk.eyJ1IjoiYWRpdmljY28iLCJhIjoiY2t1NnE3ODloM3ZjeTJycXR2aWdpdDdrbSJ9.zeUKNOeM5fJwxIXdbrvkTg'; // Set your mapbox token here
+// const MAPBOX_TOKEN = 'pk.eyJ1IjoiYWRpdmljY28iLCJhIjoiY2t1NnE3ODloM3ZjeTJycXR2aWdpdDdrbSJ9.zeUKNOeM5fJwxIXdbrvkTg'; // Set your mapbox token here
+const MAPBOX_TOKEN = 'pk.eyJ1IjoiYWRpdmljY28iLCJhIjoiY2ttbGtxOHBnMDc0dDJ2bXo1d2ZpcW56aiJ9.-o8ejYbk600ghhhZdW5qoQ'
 
 const Map = ({ data }) => {
 
@@ -135,7 +136,8 @@ const Map = ({ data }) => {
             {...viewport}
             width= "100vw"
             height= "96.15vh"
-            mapStyle="mapbox://styles/adivicco/ckhrh61yw20b719ke3jy81f5d"
+            mapStyle= "mapbox://styles/adivicco/ckn3luvp346tt17pqeq97o4g1"
+                    //"mapbox://styles/adivicco/ckhrh61yw20b719ke3jy81f5d"
                     //"mapbox://styles/adivicco/ckhrh5efl1u4819qt2053jnyv"
                     //"mapbox://styles/adivicco/ckhr7iaop1ckj19mp4sl2bbj3"  
                     //"mapbox://styles/adivicco/ck92z7q8b2ndc1ioc8nc1vxf3"
