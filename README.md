@@ -1,5 +1,5 @@
 # Check out the Final Map on Netlify
-Application URL: https://focused-cori-4b53cf.netlify.app/ 
+Application URL: https://nasa-natural-events-tracker.netlify.app/ 
 
 # Getting Started with Create React App
 
