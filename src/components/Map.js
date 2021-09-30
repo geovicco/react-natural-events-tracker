@@ -47,7 +47,7 @@ const IcebergMarker = ({ onClick }) => {
     )
 }
 // Set API Key from your Mapbox Account 
-const MAPBOX_TOKEN = 'pk.eyJ1IjoiYWRpdmljY28iLCJhIjoiY2toN2d0cnJkMGFkMTJ5bzhxbTB5eDJmeCJ9.KfuAOmzRFSOf9dI1R4Mz2w'; // Set your mapbox token here
+const MAPBOX_TOKEN = 'pk.eyJ1IjoiYWRpdmljY28iLCJhIjoiY2t1NnE3ODloM3ZjeTJycXR2aWdpdDdrbSJ9.zeUKNOeM5fJwxIXdbrvkTg'; // Set your mapbox token here
 
 const Map = ({ data }) => {
 
